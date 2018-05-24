@@ -32,18 +32,24 @@ def main():
     pig1 = Pig(1)
     pig2 = Pig(33)
 
+    print("Testing: heavier_pig method:")
     print(pig1.heavier_pig(pig2).get_weight())
 
+    print("Testing: get_weight method:")
     print(pig1.get_weight(), pig2.get_weight())
 
+    print("Testing: eat method: (weight should increase)")
     pig1.eat(33)
     print(pig1.get_weight())
 
+    print("Testing: eat_for_a_year method:")
     pig1.eat_for_a_year()
     print(pig1.get_weight())
 
+    print("Testing: heavier_pig method: ")
     print(pig1.heavier_pig(pig2).get_weight())
 
+    print("Testing: new_pig method: (also testing to ensure pig2 and pig1 were not mutated)")
     pig3 = pig1.new_pig(pig2)
     print(pig3.get_weight())
     pig3.eat(234)
