@@ -21,7 +21,7 @@ def main():
     print(' to run the testing code as you complete the TODOs.')
     run_test_problem2a()
     run_test_problem2b()
-    # run_test_problem2c()
+    run_test_problem2c()
 
 
 
@@ -416,6 +416,23 @@ def problem2c(x):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    num = x-1
+    value = 0
+    while True:
+        if is_prime(num):
+            if num >= x:
+                if is_prime((sum_of_digits(num))):
+                    value = num
+                    break
+                else: num = num + 1
+            else:
+                num = num + 1
+
+        else:
+            num = num + 1
+
+    return value
 
 
 ###############################################################################
