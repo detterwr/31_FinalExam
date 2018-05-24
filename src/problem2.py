@@ -417,7 +417,7 @@ def problem2c(x):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-    num = x-1
+    num = x
     value = 0
     while True:
         if is_prime(num):
